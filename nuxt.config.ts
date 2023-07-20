@@ -1,5 +1,6 @@
 import { defineNuxtConfig } from 'nuxt/config'
 import { resolve } from 'node:path';
+import svgLoader from 'vite-svg-loader';
 
 const isDev = process.env.NODE_ENV === 'development';
 
@@ -33,6 +34,7 @@ export default defineNuxtConfig({
 
   vite: {
     plugins: [
+        svgLoader({}),
     ],
     esbuild: { drop: !isDev ? ['console', 'debugger'] : [] },
 
