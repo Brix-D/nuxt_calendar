@@ -2,6 +2,7 @@
     <div>
         test
         <u-icon name="logo" :size="40"/>
+        
     </div>
 </template>
 
