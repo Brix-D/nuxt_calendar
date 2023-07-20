@@ -1,13 +1,4 @@
 <template>
-    <div>
-        test
-    </div>
+<TaskItem :bgc="'#FF6363'" />
+<Tool :img="'/assets/img/test.svg'" />
 </template>
-
-<script setup lang="ts">
-
-</script>
-
-<style scoped lang="scss">
-
-</style>

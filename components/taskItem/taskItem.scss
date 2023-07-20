@@ -1,0 +1,17 @@
+.task-item {
+  padding: 12px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 280px;
+  width: max-content;
+  p {
+    color: #fff;
+  }
+  &-arrow {
+    background-color: #ff7b7b;
+    padding: 4px;
+    border-radius: 100%;
+  }
+}

@@ -1,0 +1,6 @@
+<svg width="30" height="40" viewBox="0 0 30 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="10" width="20" height="40" rx="10" fill="#5390EB"/>
+<g style="mix-blend-mode:multiply">
+<rect x="20" width="20" height="20" rx="10" transform="rotate(90 20 0)" fill="#EB5353"/>
+</g>
+</svg>
