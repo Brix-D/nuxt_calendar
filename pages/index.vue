@@ -1,5 +1,7 @@
 <template>
     <div>
+        <TaskItem :bgc="'#FF6363'" />
+        <Tool :img="'/assets/img/test.svg'" />
         test
         <u-icon name="logo" :size="40"/>
 
