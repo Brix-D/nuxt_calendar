@@ -2,9 +2,9 @@
     <div :class="$style['calendar'] ">
         <header :class="$style['calendar__header']">
             test
+            {{ monday }} - {{ sunday }}
         </header>
         <div :class="$style['calendar__body']">
-            
             <aside :class="$style['calendar__background']">
                 <template v-for="(row, index) in rows" :key="index">
                     <div v-for="day in days" :key="day" :class="[
@@ -26,6 +26,7 @@
 </template>
 
 <script setup lang="ts" generic="T">
+import { getStartEndOfWeek } from '@/utils/dates';
 
 interface ICalendarRequiredEvent {
     start: string;
@@ -39,14 +40,16 @@ type ICalendarRow = ICalendarEvent[];
 interface Props {
     rows: ICalendarRow[];
     days?: number;
+    now?: string | Date;
 }
 
 const props = withDefaults(defineProps<Props>(), {
     days: 7,
+    now: new Date().toISOString(),
 });
 
+// background
 const BACKGROUND_ROW_HEIGHT = 100;
-
 
 const backgroundColumns = computed(() => {
     return `repeat(${props.days}, minmax(${BACKGROUND_ROW_HEIGHT}px, 1fr))`;
@@ -56,6 +59,12 @@ const backgroundRows = computed(() => {
     return `repeat(${props.rows.length}, minmax(${BACKGROUND_ROW_HEIGHT}px, 1fr))`;
 });
 
+// dates
+const convertedDate = computed(() => {
+    return props.now instanceof Date ? props.now : new Date(props.now);
+});
+
+const { monday, sunday } = getStartEndOfWeek(convertedDate.value);
 </script>
 
 <style module lang="scss">

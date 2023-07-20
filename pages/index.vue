@@ -2,7 +2,7 @@
     <div>
         <!-- test
         <u-icon name="logo" :size="40"/> -->
-        <Calendar :rows="rows" >
+        <Calendar :rows="rows">
         </Calendar>
     </div>
 </template>
