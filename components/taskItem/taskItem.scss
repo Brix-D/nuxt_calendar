@@ -6,11 +6,13 @@
   align-items: center;
   min-width: 280px;
   width: max-content;
+  transition: 500ms;
+  cursor: pointer;
   p {
     color: #fff;
+    font-family: SF5;
   }
-  &-arrow {
-    background-color: #ff7b7b;
+  &__arrow {
     padding: 4px;
     border-radius: 100%;
   }

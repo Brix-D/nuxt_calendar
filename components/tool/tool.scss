@@ -1,11 +1,14 @@
 .tool {
-  padding: 15px; 
   background: $bgc;
   border: 1px solid #E2E9F3;
   width: max-content;
   border-radius: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  line-height: 1;
   img {
     width: 20px;
   }

@@ -1,0 +1,21 @@
+.addTask {
+  position: fixed;
+  right: 32;
+  bottom: 32px;
+  p {
+    color: $primary;
+    font-family: SF7;
+    padding-bottom: 8px;
+  }
+  &-plus {
+    background-color: $primary;
+    display: flex;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    align-items: center;
+    border-radius: 100%;
+    line-height: 1;
+    box-shadow: 14px 15px 23px -8px rgba(90, 164, 255, 0.316);
+  }
+}

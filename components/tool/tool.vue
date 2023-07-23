@@ -1,13 +1,18 @@
 <template>
   <div class="tool">
-    <img :src="img" alt="">
+    <u-icon :name="tool.img" :size="30" />
   </div>
 </template>
 
 <script setup lang="ts">
-defineProps({
-  img: String
-})
+import { ITask } from '@/types/ITask'
+import UIcon from "@/components/ui/icons/UIcon/index.vue";
+
+interface IPropsTool {
+  tool: ITask
+}
+
+const props = defineProps<IPropsTool>()
 </script>
 
 <style scoped lang="scss">
